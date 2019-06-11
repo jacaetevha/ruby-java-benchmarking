@@ -1,0 +1,26 @@
+name,count,array_size,total
+Oracle Java 8 forLoop,1000,10000,0.649
+Oracle Java 8 folding,1000,10000,0.603
+Oracle Java 8 forLoop,10000,10000,4.716
+Oracle Java 8 folding,10000,10000,4.745
+Oracle Java 8 forLoop,100000,10000,44.303
+Oracle Java 8 folding,100000,10000,44.023
+Oracle Java 8 forLoop,1000000,10000,449.28
+Oracle Java 8 folding,1000000,10000,499.585
+GraalVM forLoop,1000,10000,0.52
+GraalVM folding,1000,10000,0.49
+GraalVM forLoop,10000,10000,3.943
+GraalVM folding,10000,10000,4.024
+GraalVM forLoop,100000,10000,32.627
+GraalVM folding,100000,10000,37.523
+GraalVM forLoop,1000000,10000,329.049
+GraalVM folding,1000000,10000,388.802
+native-image forLoop,1000,10000,0.983
+native-image folding,1000,10000,1.169
+native-image forLoop,10000,10000,9.051
+native-image folding,10000,10000,11.338
+native-image forLoop,100000,10000,87.038
+native-image folding,100000,10000,114.265
+native-image forLoop,1000000,10000,914.598
+native-image folding,1000000,10000,1131.142
+

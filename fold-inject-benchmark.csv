@@ -1,0 +1,37 @@
+name,count,array_size,user_total
+Truffle Ruby 1.0.0-rc10 inject,1000,10000,0.049898
+Truffle Ruby 1.0.0-rc10 aliased fold,1000,10000,0.056721
+Truffle Ruby 1.0.0-rc10 handcrafted fold,1000,10000,0.097868
+Truffle Ruby 1.0.0-rc10 inject,10000,10000,0.273698
+Truffle Ruby 1.0.0-rc10 aliased fold,10000,10000,0.308301
+Truffle Ruby 1.0.0-rc10 handcrafted fold,10000,10000,0.178559
+Truffle Ruby 1.0.0-rc10 inject,100000,10000,2.800667
+Truffle Ruby 1.0.0-rc10 aliased fold,100000,10000,2.790353
+Truffle Ruby 1.0.0-rc10 handcrafted fold,100000,10000,0.876179
+Truffle Ruby 1.0.0-rc10 inject,1000000,10000,7.211924
+Truffle Ruby 1.0.0-rc10 aliased fold,1000000,10000,9.270379
+Truffle Ruby 1.0.0-rc10 handcrafted fold,1000000,10000,7.330860
+JRuby 9.2.7.0 inject,1000,10000,0.560000
+JRuby 9.2.7.0 aliased fold,1000,10000,0.650000
+JRuby 9.2.7.0 handcrafted fold,1000,10000,1.070000
+JRuby 9.2.7.0 inject,10000,10000,4.810000
+JRuby 9.2.7.0 aliased fold,10000,10000,5.090000
+JRuby 9.2.7.0 handcrafted fold,10000,10000,9.300000
+JRuby 9.2.7.0 inject,100000,10000,50.260000
+JRuby 9.2.7.0 aliased fold,100000,10000,55.020000
+JRuby 9.2.7.0 handcrafted fold,100000,10000,98.680000
+JRuby 9.2.7.0 inject,1000000,10000,501.290000
+JRuby 9.2.7.0 aliased fold,1000000,10000,540.420000
+JRuby 9.2.7.0 handcrafted fold,1000000,10000,1033.910000
+MRI Ruby 2.5.3 inject,1000,10000,0.626664
+MRI Ruby 2.5.3 aliased fold,1000,10000,0.629671
+MRI Ruby 2.5.3 handcrafted fold,1000,10000,0.780936
+MRI Ruby 2.5.3 inject,10000,10000,6.287740
+MRI Ruby 2.5.3 aliased fold,10000,10000,6.239949
+MRI Ruby 2.5.3 handcrafted fold,10000,10000,8.769731
+MRI Ruby 2.5.3 inject,100000,10000,63.342514
+MRI Ruby 2.5.3 aliased fold,100000,10000,63.414819
+MRI Ruby 2.5.3 handcrafted fold,100000,10000,82.643665
+MRI Ruby 2.5.3 inject,1000000,10000,616.495874
+MRI Ruby 2.5.3 aliased fold,1000000,10000,636.365195
+MRI Ruby 2.5.3 handcrafted fold,1000000,10000,754.031493
