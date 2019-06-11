@@ -1,8 +1,8 @@
 # ruby-java-benchmarking
 
-![https://raw.githubusercontent.com/jacaetevha/ruby-java-benchmarking/master/images/fold-inject-benchmark.png](ruby implementations)
+![ruby implementations](https://raw.githubusercontent.com/jacaetevha/ruby-java-benchmarking/master/images/fold-inject-benchmark.png)
 
-![https://raw.githubusercontent.com/jacaetevha/ruby-java-benchmarking/master/images/folding-benchmark.png](java implementations)
+![java implementations](https://raw.githubusercontent.com/jacaetevha/ruby-java-benchmarking/master/images/folding-benchmark.png)
 
 ### Java 8 (Oracle): Java HotSpot(TM) 64-Bit Server VM (build 25.152-b16, mixed mode)
 ```
