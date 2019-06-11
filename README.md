@@ -6,15 +6,15 @@
 
 ### Java 8 (Oracle): Java HotSpot(TM) 64-Bit Server VM (build 25.152-b16, mixed mode)
 ```
-$> java Folding
+$> java -DCOUNT=1000 Folding
 
 COUNT: 1000
 ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    0.649
-folding    0.603
+forLoop    0.023
+folding    0.034
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -25,8 +25,8 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    4.716
-folding    4.745
+forLoop    0.102
+folding    0.242
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -37,8 +37,8 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    44.303
-folding    44.023
+forLoop    0.846
+folding    0.975
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -49,22 +49,22 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    449.28
-folding    499.585
+forLoop    9.15
+folding    9.479
 ```
 
 ### GraalVM Community Edition 19.0.0
 
 ```
-$> JAVA_HOME=~/graalvm-ce-19.0.0/Contents/Home java Folding
+$> JAVA_HOME=~/graalvm-ce-19.0.0/Contents/Home java -DCOUNT=1000 Folding
 
 COUNT: 1000
 ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    0.52
-folding    0.49
+forLoop    0.12
+folding    0.042
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -75,19 +75,20 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    3.943
-folding    4.024
+forLoop    0.128
+folding    0.147
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
 $> JAVA_HOME=~/graalvm-ce-19.0.0/Contents/Home java -DCOUNT=100000 Folding
+
 COUNT: 100000
 ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    32.627
-folding    37.523
+forLoop    1.003
+folding    1.028
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -98,22 +99,77 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    329.049
-folding    388.802
+forLoop    10.021
+folding    10.801
+```
+
+### Kotlin (Kotlin version 1.3.31-release-197 (JRE 11-ea+21))
+
+(built with `kotlinc fold.kt -include-runtime -d fold.jar`)
+
+```
+$> java -DCOUNT=1000 -jar fold.jar
+
+COUNT: 1000
+ARRAY SIZE: 10000
+
+
+        TOTAL
+sum     0.032000
+fold    0.081000
+
+~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+$> java -DCOUNT=10000 -jar fold.jar
+
+COUNT: 10000
+ARRAY SIZE: 10000
+
+
+        TOTAL
+sum     0.058000
+fold    0.131000
+
+~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+$> java -Xms4g -Xmx4g -DCOUNT=100000 -jar fold.jar
+
+COUNT: 100000
+ARRAY SIZE: 10000
+
+
+        TOTAL
+sum     0.343000
+fold    0.698000
+
+~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+$> java -DCOUNT=100000 -jar fold.jar
+
+COUNT: 1000000
+ARRAY SIZE: 10000
+
+
+        TOTAL
+sum     3.097000
+fold    6.292000
+
 ```
 
 ### Compiled binary via native-image (GraalVM Community Edition 19.0.0)
 
+(built with `~/graalvm-ce-19.0.0/Contents/Home/bin/native-image Folding`)
+
 ```
-$> ./folding
+$> ./folding -DCOUNT=1000
 
 COUNT: 1000
 ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    0.983
-folding    1.169
+forLoop    0.059
+folding    0.069
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -124,8 +180,8 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    9.051
-folding    11.338
+forLoop    0.587
+folding    0.686
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -136,8 +192,8 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    87.038
-folding    114.265
+forLoop    5.62
+folding    6.814
 
 ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
@@ -148,8 +204,8 @@ ARRAY SIZE: 10000
 
 
            TOTAL
-forLoop    914.598
-folding    1131.142
+forLoop    57.398
+folding    68.924
 ```
 
 ### JRuby 9.2.7.0

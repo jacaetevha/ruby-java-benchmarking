@@ -1,26 +1,11 @@
-name,count,array_size,total
-Oracle Java 8 forLoop,1000,10000,0.649
-Oracle Java 8 folding,1000,10000,0.603
-Oracle Java 8 forLoop,10000,10000,4.716
-Oracle Java 8 folding,10000,10000,4.745
-Oracle Java 8 forLoop,100000,10000,44.303
-Oracle Java 8 folding,100000,10000,44.023
-Oracle Java 8 forLoop,1000000,10000,449.28
-Oracle Java 8 folding,1000000,10000,499.585
-GraalVM forLoop,1000,10000,0.52
-GraalVM folding,1000,10000,0.49
-GraalVM forLoop,10000,10000,3.943
-GraalVM folding,10000,10000,4.024
-GraalVM forLoop,100000,10000,32.627
-GraalVM folding,100000,10000,37.523
-GraalVM forLoop,1000000,10000,329.049
-GraalVM folding,1000000,10000,388.802
-native-image forLoop,1000,10000,0.983
-native-image folding,1000,10000,1.169
-native-image forLoop,10000,10000,9.051
-native-image folding,10000,10000,11.338
-native-image forLoop,100000,10000,87.038
-native-image folding,100000,10000,114.265
-native-image forLoop,1000000,10000,914.598
-native-image folding,1000000,10000,1131.142
-
+Sum of total,Column Labels,,,,
+Row Labels,"1,000","10,000","100,000","1,000,000",Grand Total
+GraalVM folding,0.042,0.147,1.028,10.801,12.018
+GraalVM forLoop,0.12,0.128,1.003,10.021,11.272
+Kotlin fold,0.081,0.131,0.698,6.292,7.202
+Kotlin sum,0.032,0.058,0.343,3.097,3.53
+native-image folding,0.069,0.686,6.814,68.924,76.493
+native-image forLoop,0.059,0.587,5.62,57.398,63.664
+Oracle Java 8 folding,0.034,0.242,0.975,9.479,10.73
+Oracle Java 8 forLoop,0.023,0.102,0.846,9.15,10.121
+Grand Total,0.46,2.081,17.327,175.162,195.03
